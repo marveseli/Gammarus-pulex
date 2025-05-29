@@ -2,7 +2,6 @@ import pandas as pd
 
 df = pd.read_csv("data.csv", header=None, names=["day", "length"])
 
-
 # dataframe is separated by negative values in first column vertically actually this should be 3 datasets
 
 split_index = df[df["day"] < 0].index.tolist()
@@ -47,3 +46,16 @@ plot_data(df3, "Data at 13°C")
 df1.to_csv("huang2024_data_15C.csv", index=False)
 df2.to_csv("huang2024_data_11C.csv", index=False)
 df3.to_csv("huang2024_data_13C.csv", index=False)
+
+# same thing for the other datasets
+df = pd.read_csv("data_WeltonClarkA.csv", header=None, names=["day", "length"])
+
+# this dataset is not separated by negative values
+df["day"] = df["day"].astype(int)
+df["length"] = df["length"].round(2)
+
+# plot the data
+plot_data(df, "Welton Clark A Data")
+
+# save the dataframe to csv file
+df.to_csv("welton_clark_a_data.csv", index=False)
