@@ -884,6 +884,46 @@ data.Ttp = [ ... % time since birth (d), wet weight (mg)
 	20 77];
 units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at puberty'};  
 bibkey.Ttp = 'Sutcliffe1993';
+
+data.tL8 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
+units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
+temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
+bibkey.tL8 = 'Huang2024';
+comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
+%
+data.tL9 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
+units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  
+temp.tL9    = C2K(13);  units.temp.tL9 = 'K'; label.temp.tL9 = 'temperature';
+bibkey.tL9 = 'Huang2024';
+comment.tL9 =  ['Control group of chronic toxicity test (imidacloprid).'];
+%
+data.tL10 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL10,1); for i=2:n; if data.tL10(i,1)<=data.tL10(i-1,1); data.tL10(i,1)=data.tL10(i-1,1)+1e-8; end;end
+units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'};  
+temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
+bibkey.tL10 = 'Huang2024';
+comment.tL10 =  ['Control group of chronic toxicity test (imidacloprid).'];
+
 %% set weights for all real data
 weights = setweights(data, []);
 
@@ -973,10 +1013,16 @@ bibkey = 'Huan2021'; type = 'misc'; bib = [ ...
 'note = {unpublished data; Only control data used for the entries}'];
 metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
 %
-bibkey = 'Sutcliffe1993'; type = 'misc'; bib = [ ... 
+bibkey = 'Sutc1993'; type = 'misc'; bib = [ ... 
 'author = {David W Sutcliff}, ' ... 
 'title = {REPRODUCTION IN GAMMARUS (CRUSTACEA, AMPHIPODA): BASIC PROCESSES}, ' ...
 'note = {}'];
+metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
+%
+bibkey = 'Huan2024'; type = 'misc'; bib = [ ... 
+'author = {Anna Huang}, {Paul J. Van den Brink}, {Nico W. Van den Brink}, {Jan Baas} ' ... 
+'title = {A dynamic energy budget (DEB) model to assess the sublethal effects of imidacloprid toward Gammarus pulex at different temperatures}, ' ...
+'note = {only control data used for the entries}'];
 metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
 
 
