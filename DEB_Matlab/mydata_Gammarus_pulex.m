@@ -886,12 +886,19 @@ units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at pube
 bibkey.Ttp = 'Sutcliffe1993';
 
 data.tL8 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+	7	2.31;
+	24	3.09;
+	47	4.14;
+	67	4.06;
+	57	4.64;
+	83	8.3;
+	111	8.73;
+	113	6.74;
+	144	6.81;
+	171	8.76;
+	221	10.66;
+	473	11.25
+];
 n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
 units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
 temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
@@ -899,12 +906,26 @@ bibkey.tL8 = 'Huang2024';
 comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
 data.tL9 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+	58	2.93;
+	90	3.31;
+	90	3.62;
+	90	3.98;
+	90	4.6;
+	90	4.83;
+	144	6.03;
+	144	6.34;
+	144	7.24;
+	182	5.4;
+	182	7.2;
+	182	7.51;
+	182	8.09;
+	220	10.15;
+	221	8.52;
+	221	8.13;
+	245	9.68;
+	244	9.06;
+	245	8.67
+];
 n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
 units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  
 temp.tL9    = C2K(13);  units.temp.tL9 = 'K'; label.temp.tL9 = 'temperature';
@@ -912,12 +933,27 @@ bibkey.tL9 = 'Huang2024';
 comment.tL9 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
 data.tL10 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+	29	2.42;
+	57	3.78;
+	57	4.14;
+	57	4.49;
+	85	4.25;
+	85	5.26;
+	85	6.2;
+	85	6.7;
+	114	6.66;
+	114	8.34;
+	143	6.73;
+	143	8.02;
+	143	8.29;
+	143	8.96;
+	176	6.61;
+	176	7.51;
+	176	8.44;
+	176	9.65;
+	199	8.79;
+	199	8.99
+];
 n=size(data.tL10,1); for i=2:n; if data.tL10(i,1)<=data.tL10(i-1,1); data.tL10(i,1)=data.tL10(i-1,1)+1e-8; end;end
 units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'};  
 temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
