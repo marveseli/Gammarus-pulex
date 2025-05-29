@@ -886,26 +886,6 @@ units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at pube
 bibkey.Ttp = 'Sutcliffe1993';
 
 data.tL8 = [ ... % time since start (d), length (cm)
-	7	2.31;
-	24	3.09;
-	47	4.14;
-	67	4.06;
-	57	4.64;
-	83	8.3;
-	111	8.73;
-	113	6.74;
-	144	6.81;
-	171	8.76;
-	221	10.66;
-	473	11.25
-];
-n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
-units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
-temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
-bibkey.tL8 = 'Huang2024';
-comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
-%
-data.tL9 = [ ... % time since start (d), length (cm)
 	58	2.93;
 	90	3.31;
 	90	3.62;
@@ -925,6 +905,26 @@ data.tL9 = [ ... % time since start (d), length (cm)
 	245	9.68;
 	244	9.06;
 	245	8.67
+];
+n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
+units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
+temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
+bibkey.tL8 = 'Huang2024';
+comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
+%
+data.tL9 = [ ... % time since start (d), length (cm)
+	7	2.31;
+	24	3.09;
+	47	4.14;
+	67	4.06;
+	57	4.64;
+	83	8.3;
+	111	8.73;
+	113	6.74;
+	144	6.81;
+	171	8.76;
+	221	10.66;
+	473	11.25
 ];
 n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
 units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  

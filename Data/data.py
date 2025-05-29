@@ -39,13 +39,13 @@ df3["day"] = df3["day"].astype(int)
 
 # plot the data
 plot_data(df1, "Data at 15°C")
-plot_data(df2, "Data at 11°C")
-plot_data(df3, "Data at 13°C")
+plot_data(df2, "Data at 13°C")
+plot_data(df3, "Data at 11°C")
 
 # save the dataframes to csv files
 df1.to_csv("huang2024_data_15C.csv", index=False)
-df2.to_csv("huang2024_data_11C.csv", index=False)
-df3.to_csv("huang2024_data_13C.csv", index=False)
+df2.to_csv("huang2024_data_13C.csv", index=False)
+df3.to_csv("huang2024_data_11C.csv", index=False)
 
 # same thing for the other datasets
 df = pd.read_csv("data_WeltonClarkA.csv", header=None, names=["day", "length"])
