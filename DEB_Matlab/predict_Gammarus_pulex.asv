@@ -140,7 +140,7 @@ function [prdData, info] = predict_Gammarus_pulex(par, data, auxData)
   Ea_b2 = a_b ./ TC_Tab2; % d, age at birth at T
   
   % Ttp data
-  Et_p = t_p ./ TC_Tab2; %d, time since birth at puberty at T
+  E
   
   % pack to output
   prdData.tL = ELw;
@@ -161,4 +161,3 @@ function [prdData, info] = predict_Gammarus_pulex(par, data, auxData)
   prdData.tW_m = EWw_m;
   prdData.Tab = Ea_b;
   prdData.Tab2 = Ea_b2;
-  prdData.Ttp = Et_p;

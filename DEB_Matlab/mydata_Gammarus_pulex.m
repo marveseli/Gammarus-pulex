@@ -19,7 +19,7 @@ metaData.ecoCode.reprod  = {'O'};
 
 metaData.T_typical  = C2K(13); % K, body temp
 metaData.data_0     = {'ab'; 'ap'; 'am'; 'Lb'; 'Lp'; 'Li'; 'Wwb'; 'Wwp'; 'Wwi'; 'Ri'}; 
-metaData.data_1     = {'t-L_T'; 't-Ww'; 'T-ab'}; 
+metaData.data_1     = {'t-L_T'; 't-Ww'; 'T-ab'; 'T-ap'}; 
 
 metaData.COMPLETE = 2.5; % using criteria of LikaKear2011
 
