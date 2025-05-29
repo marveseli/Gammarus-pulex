@@ -876,14 +876,6 @@ data.Tab2 = [ ... % time since birth (d), wet weight (mg)
 	20 21];
 units.Tab2   = {'C', 'd'};  label.Tab2 = {'temperature', 'age at birth'};  
 bibkey.Tab2 = 'Sutcliffe1993';
-
-data.Ttp = [ ... % time since birth (d), wet weight (mg)
-	5  364;
-	10 154;
-	15 119;
-	20 77];
-units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at puberty'};  
-bibkey.Ttp = 'Sutcliffe1993';
 %% set weights for all real data
 weights = setweights(data, []);
 
@@ -975,9 +967,9 @@ metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
 %
 bibkey = 'Sutcliffe1993'; type = 'misc'; bib = [ ... 
 'author = {David W Sutcliff}, ' ... 
-'title = {REPRODUCTION IN GAMMARUS (CRUSTACEA, AMPHIPODA): BASIC PROCESSES}, ' ...
-'note = {}'];
+'title = {Chronic toxicity of flupyradifurone and imidacloprid to \emph{Gammarus pulex} at different temperatures}, ' ...
+'note = {unpublished data; Only control data used for the entries}'];
 metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
 
-
+%bibkey.Tab2 = 'Sutcliffe1993'
 
