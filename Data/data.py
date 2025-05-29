@@ -59,3 +59,32 @@ plot_data(df, "Welton Clark A Data")
 
 # save the dataframe to csv file
 df.to_csv("welton_clark_a_data.csv", index=False)
+
+
+# do the same for data_WeltonClarkB.csv
+df = pd.read_csv("data_WeltonClarkB.csv", header=None, names=["day", "length"])
+# this dataset is not separated by negative values
+df["day"] = df["day"].astype(int)
+df["length"] = df["length"].round(2)
+# plot the data
+plot_data(df, "Welton Clark B Data")
+# save the dataframe to csv file
+df.to_csv("welton_clark_b_data.csv", index=False)
+# do the same for data_WeltonClarkC.csv
+df = pd.read_csv("data_WeltonClarkC.csv", header=None, names=["day", "length"])
+# this dataset is not separated by negative values
+df["day"] = df["day"].astype(int)
+df["length"] = df["length"].round(2)
+# plot the data
+plot_data(df, "Welton Clark C Data")
+# save the dataframe to csv file
+df.to_csv("welton_clark_c_data.csv", index=False)
+# do the same for data_WeltonClarkD.csv
+df = pd.read_csv("data_WeltonClarkD.csv", header=None, names=["day", "length"])
+# this dataset is not separated by negative values
+df["day"] = df["day"].astype(int)
+df["length"] = df["length"].round(2)
+# plot the data
+plot_data(df, "Welton Clark D Data")
+# save the dataframe to csv file
+df.to_csv("welton_clark_d_data.csv", index=False)
