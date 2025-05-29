@@ -31,6 +31,13 @@ par.Lw4_0 = 0.62427;  free.Lw4_0 = 1;   units.Lw4_0 = 'cm';       label.Lw4_0 = 
 par.Lw5_0 = 0.40653;  free.Lw5_0 = 1;   units.Lw5_0 = 'cm';       label.Lw5_0 = 'initial  length for tL5 data'; 
 par.Lw6_0 = 0.45523;  free.Lw6_0 = 1;   units.Lw6_0 = 'cm';       label.Lw6_0 = 'initial  length for tL6 data'; 
 par.Lw7_0 = 0.48592;  free.Lw7_0 = 1;   units.Lw7_0 = 'cm';       label.Lw7_0 = 'initial  length for tL7 data'; 
+par.Lw8_0 = 0.64219;  free.Lw8_0 = 1;   units.Lw8_0 = 'cm';       label.Lw8_0 = 'initial  length for tL8 data';
+par.Lw9_0 = 0.50630;  free.Lw9_0 = 1;   units.Lw9_0 = 'cm';       label.Lw9_0 = 'initial  length for tL9 data';
+par.Lw10_0 = 0.53041;  free.Lw10_0 = 1;   units.Lw10_0 = 'cm';       label.Lw10_0 = 'initial  length for tL10 data';
+par.Lw11_0 = 0.32877;  free.Lw11_0 = 1;   units.Lw11_0 = 'cm';       label.Lw11_0 = 'initial  length for tL11 data';
+par.Lw12_0 = 0.32657;  free.Lw12_0 = 1;   units.Lw12_0 = 'cm';       label.Lw12_0 = 'initial  length for tL12 data';
+par.Lw13_0 = 0.46246;  free.Lw13_0 = 1;   units.Lw13_0 = 'cm';       label.Lw13_0 = 'initial  length for tL13 data';
+par.Lw14_0 = 0.46246;  free.Lw14_0 = 1;   units.Lw14_0 = 'cm';       label.Lw14_0 = 'initial  length for tL14 data';
 par.del_M = 0.21918;  free.del_M = 1;   units.del_M = '-';        label.del_M = 'shape coefficient'; 
 par.f = 1;            free.f     = 0;   units.f = '-';            label.f = 'scaled functional response for 0-var data'; 
 par.t_0 = 0;          free.t_0   = 0;   units.t_0 = 'd';          label.t_0 = 'time at start development'; 
