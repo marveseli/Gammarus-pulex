@@ -923,7 +923,58 @@ units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'}
 temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
 bibkey.tL10 = 'Huang2024';
 comment.tL10 =  ['Control group of chronic toxicity test (imidacloprid).'];
-
+%
+data.tL11 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL11,1); for i=2:n; if data.tL11(i,1)<=data.tL11(i-1,1); data.tL11(i,1)=data.tL11(i-1,1)+1e-8; end;end
+units.tL11   = {'d', 'cm'};  label.tL11 = {'time since start', 'length', '5 C'};  
+temp.tL11    = C2K(5);  units.temp.tL11 = 'K'; label.temp.tL11 = 'temperature';
+bibkey.tL11 = 'WeltClak1980';
+comment.tL11 =  [''];
+%
+data.tL12 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL12,1); for i=2:n; if data.tL12(i,1)<=data.tL12(i-1,1); data.tL12(i,1)=data.tL12(i-1,1)+1e-8; end;end
+units.tL12   = {'d', 'cm'};  label.tL12 = {'time since start', 'length', '10 C'};  
+temp.tL12    = C2K(10);  units.temp.tL12 = 'K'; label.temp.tL12 = 'temperature';
+bibkey.tL12 = 'WeltClak1980';
+comment.tL12 =  [''];
+%
+data.tL13 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL13,1); for i=2:n; if data.tL13(i,1)<=data.tL13(i-1,1); data.tL13(i,1)=data.tL13(i-1,1)+1e-8; end;end
+units.tL13   = {'d', 'cm'};  label.tL13 = {'time since start', 'length', '15 C'};  
+temp.tL13    = C2K(15);  units.temp.tL13 = 'K'; label.temp.tL13 = 'temperature';
+bibkey.tL13 = 'WeltClak1980';
+comment.tL13 =  [''];
+%
+data.tL14 = [ ... % time since start (d), length (cm)
+0	0.443;
+0	0.509;
+0	0.587;
+0	0.447;
+0	0.475;
+28	0.527];
+n=size(data.tL14,1); for i=2:n; if data.tL14(i,1)<=data.tL14(i-1,1); data.tL14(i,1)=data.tL14(i-1,1)+1e-8; end;end
+units.tL14   = {'d', 'cm'};  label.tL14 = {'time since start', 'length', '20 C'};  
+temp.tL14    = C2K(20);  units.temp.tL14 = 'K'; label.temp.tL14 = 'temperature';
+bibkey.tL14 = 'WeltClak1980';
+comment.tL14 =  [''];
 %% set weights for all real data
 weights = setweights(data, []);
 
@@ -1024,6 +1075,12 @@ bibkey = 'Huan2024'; type = 'misc'; bib = [ ...
 'title = {A dynamic energy budget (DEB) model to assess the sublethal effects of imidacloprid toward Gammarus pulex at different temperatures}, ' ...
 'note = {only control data used for the entries}'];
 metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
+bibkey = 'WeltClar1980'; type = 'misc'; bib = [ ... 
+'author = {J. S. Welton}, {R. T. Clarke}, ' ... 
+'title = {Laboratory Studies on the Reproduction and Growth of the Amphipod, Gammarus pulex (L.)}, ' ...
+'note = {}'];
+metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
+
 
 
 
