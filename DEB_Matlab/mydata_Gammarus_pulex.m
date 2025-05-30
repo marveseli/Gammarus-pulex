@@ -885,7 +885,7 @@ data.Ttp = [ ... % time since birth (d), wet weight (mg)
 units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at puberty'};  
 bibkey.Ttp = 'Sutcliffe1993';
 
-data.tL8 = [ ... % time since start (d), length (cm)
+data.tL8 = [ ... % time since start (d), length (mm)
 	58	2.93;
 	90	3.31;
 	90	3.62;
@@ -906,13 +906,14 @@ data.tL8 = [ ... % time since start (d), length (cm)
 	244	9.06;
 	245	8.67
 ];
+data.tL8(:, 1) = data.tL8(:, 1)/10; % convert to cm
 n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
 units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
 temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
 bibkey.tL8 = 'Huang2024';
 comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
-data.tL9 = [ ... % time since start (d), length (cm)
+data.tL9 = [ ... % time since start (d), length (mm)
 	7	2.31;
 	24	3.09;
 	47	4.14;
@@ -926,13 +927,14 @@ data.tL9 = [ ... % time since start (d), length (cm)
 	221	10.66;
 	473	11.25
 ];
+data.tL9(:, 1) = data.tL9(:, 1)/10; % convert to cm
 n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
 units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  
 temp.tL9    = C2K(13);  units.temp.tL9 = 'K'; label.temp.tL9 = 'temperature';
 bibkey.tL9 = 'Huang2024';
 comment.tL9 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
-data.tL10 = [ ... % time since start (d), length (cm)
+data.tL10 = [ ... % time since start (d), length (mm)
 	29	2.42;
 	57	3.78;
 	57	4.14;
@@ -954,6 +956,7 @@ data.tL10 = [ ... % time since start (d), length (cm)
 	199	8.79;
 	199	8.99
 ];
+data.tL10(:, 1) = data.tL10(:, 1)/10; % convert to cm
 n=size(data.tL10,1); for i=2:n; if data.tL10(i,1)<=data.tL10(i-1,1); data.tL10(i,1)=data.tL10(i-1,1)+1e-8; end;end
 units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'};  
 temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
@@ -1027,6 +1030,7 @@ data.tL11 = [ ... % time since start (d), length (cm)
 	443 6.81;
 	444 7.34
 ];
+data.tL11(:, 1) = data.tL11(:, 1)/10; % convert to cm
 n=size(data.tL11,1); for i=2:n; if data.tL11(i,1)<=data.tL11(i-1,1); data.tL11(i,1)=data.tL11(i-1,1)+1e-8; end;end
 units.tL11   = {'d', 'cm'};  label.tL11 = {'time since start', 'length', '5 C'};  
 temp.tL11    = C2K(5);  units.temp.tL11 = 'K'; label.temp.tL11 = 'temperature';
@@ -1190,6 +1194,7 @@ data.tL13 = [ ... % time since start (d), length (cm)
 	172	9.7;
 	171	7.15
 ];
+data.tL13(:, 1) = data.tL13(:, 1)/10; % convert to cm
 n=size(data.tL13,1); for i=2:n; if data.tL13(i,1)<=data.tL13(i-1,1); data.tL13(i,1)=data.tL13(i-1,1)+1e-8; end;end
 units.tL13   = {'d', 'cm'};  label.tL13 = {'time since start', 'length', '15 C'};  
 temp.tL13    = C2K(15);  units.temp.tL13 = 'K'; label.temp.tL13 = 'temperature';
@@ -1241,6 +1246,7 @@ data.tL14 = [ ... % time since start (d), length (cm)
 	93	5.16;
 	140	7.72
 ];
+data.tL14(:, 1) = data.tL14(:, 1)/10; % convert to cm
 n=size(data.tL14,1); for i=2:n; if data.tL14(i,1)<=data.tL14(i-1,1); data.tL14(i,1)=data.tL14(i-1,1)+1e-8; end;end
 units.tL14   = {'d', 'cm'};  label.tL14 = {'time since start', 'length', '20 C'};  
 temp.tL14    = C2K(20);  units.temp.tL14 = 'K'; label.temp.tL14 = 'temperature';
