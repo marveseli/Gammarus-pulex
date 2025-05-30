@@ -19,7 +19,7 @@ metaData.ecoCode.reprod  = {'O'};
 
 metaData.T_typical  = C2K(13); % K, body temp
 metaData.data_0     = {'ab'; 'ap'; 'am'; 'Lb'; 'Lp'; 'Li'; 'Wwb'; 'Wwp'; 'Wwi'; 'Ri'}; 
-metaData.data_1     = {'t-L_T'; 't-Ww'; 'T-ab'}; 
+metaData.data_1     = {'t-L_T'; 't-Ww'; 'T-ab'; 'T-ap'}; 
 
 metaData.COMPLETE = 2.5; % using criteria of LikaKear2011
 
@@ -875,7 +875,7 @@ data.Tab2 = [ ... % time since birth (d), wet weight (mg)
 	15 28;
 	20 21];
 units.Tab2   = {'C', 'd'};  label.Tab2 = {'temperature', 'age at birth'};  
-bibkey.Tab2 = 'Sutcliffe1993';
+bibkey.Tab2 = 'Sutc1993';
 
 data.Ttp = [ ... % time since birth (d), wet weight (mg)
 	5  364;
@@ -883,60 +883,375 @@ data.Ttp = [ ... % time since birth (d), wet weight (mg)
 	15 119;
 	20 77];
 units.Ttp   = {'C', 'd'};  label.Ttp = {'temperature', 'time since birth at puberty'};  
-bibkey.Ttp = 'Sutcliffe1993';
+bibkey.Ttp = 'Sutc1993';
 
-data.tL8 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+data.tL8 = [ ... % time since start (d), length (mm)
+	58	2.93;
+	90	3.31;
+	90	3.62;
+	90	3.98;
+	90	4.6;
+	90	4.83;
+	144	6.03;
+	144	6.34;
+	144	7.24;
+	182	5.4;
+	182	7.2;
+	182	7.51;
+	182	8.09;
+	220	10.15;
+	221	8.52;
+	221	8.13;
+	245	9.68;
+	244	9.06;
+	245	8.67
+];
+data.tL8(:, 2) = data.tL8(:, 2) ./10; % convert to cm
 n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
 units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
 temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
-bibkey.tL8 = 'Huang2024';
+bibkey.tL8 = 'Huan2024';
 comment.tL8 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
-data.tL9 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+data.tL9 = [ ... % time since start (d), length (mm)
+	7	2.31;
+	24	3.09;
+	47	4.14;
+	67	4.06;
+	57	4.64;
+	83	8.3;
+	111	8.73;
+	113	6.74;
+	144	6.81;
+	171	8.76;
+	221	10.66;
+	473	11.25
+];
+data.tL9(:, 2) = data.tL9(:, 2) ./10; % convert to cm
 n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
 units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  
 temp.tL9    = C2K(13);  units.temp.tL9 = 'K'; label.temp.tL9 = 'temperature';
-bibkey.tL9 = 'Huang2024';
+bibkey.tL9 = 'Huan2024';
 comment.tL9 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
-data.tL10 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+data.tL10 = [ ... % time since start (d), length (mm)
+	29	2.42;
+	57	3.78;
+	57	4.14;
+	57	4.49;
+	85	4.25;
+	85	5.26;
+	85	6.2;
+	85	6.7;
+	114	6.66;
+	114	8.34;
+	143	6.73;
+	143	8.02;
+	143	8.29;
+	143	8.96;
+	176	6.61;
+	176	7.51;
+	176	8.44;
+	176	9.65;
+	199	8.79;
+	199	8.99
+];
+data.tL10(:, 2) = data.tL10(:, 2) ./10; % convert to cm
 n=size(data.tL10,1); for i=2:n; if data.tL10(i,1)<=data.tL10(i-1,1); data.tL10(i,1)=data.tL10(i-1,1)+1e-8; end;end
 units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'};  
 temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
-bibkey.tL10 = 'Huang2024';
+bibkey.tL10 = 'Huan2024';
 comment.tL10 =  ['Control group of chronic toxicity test (imidacloprid).'];
 %
-data.tL11 = [ ... % time since start (d), length (cm)
-0	0.443;
-0	0.509;
-0	0.587;
-0	0.447;
-0	0.475;
-28	0.527];
+data.tL11 = [ ... % time since start (d), length (mm)
+	20 1.5;
+	28 1.52;
+	22 1.93;
+	31 1.98;
+	42 1.98;
+	42 2.12;
+	41 2.49;
+	29 2.48;
+	41 3.42;
+	62 3.02;
+	69 2.01;
+	81 1.98;
+	92 1.98;
+	106 2.01;
+	113 2.01;
+	108 1.48;
+	108 2.18;
+	113 2.44;
+	106 2.44;
+	103 2.56;
+	94 2.56;
+	93 3.0;
+	102 3.02;
+	109 3.02;
+	108 3.5;
+	101 3.53;
+	89 3.55;
+	81 4.03;
+	107 4.03;
+	132 4.01;
+	130 5.02;
+	160 4.54;
+	158 4.04;
+	186 4.04;
+	272 5.54;
+	271 5.06;
+	272 4.82;
+	270 4.53;
+	294 7.06;
+	293 5.57;
+	293 5.06;
+	294 4.48;
+	334 6.34;
+	334 6.07;
+	334 5.81;
+	334 5.33;
+	334 5.06;
+	333 4.56;
+	354 6.32;
+	348 6.08;
+	354 5.31;
+	349 5.23;
+	346 4.8;
+	354 4.8;
+	348 4.56;
+	346 4.32;
+	346 4.03;
+	394 5.55;
+	424 5.29;
+	442 5.58;
+	443 5.84;
+	443 6.11;
+	444 6.32;
+	443 6.81;
+	444 7.34
+];
+data.tL11(:, 2) = data.tL11(:, 2) ./10; % convert to cm
 n=size(data.tL11,1); for i=2:n; if data.tL11(i,1)<=data.tL11(i-1,1); data.tL11(i,1)=data.tL11(i-1,1)+1e-8; end;end
 units.tL11   = {'d', 'cm'};  label.tL11 = {'time since start', 'length', '5 C'};  
 temp.tL11    = C2K(5);  units.temp.tL11 = 'K'; label.temp.tL11 = 'temperature';
-bibkey.tL11 = 'WelCla1980';
-comment.tL11 =  ['Control group of chronic toxicity test (imidacloprid).'];
-
+bibkey.tL11 = 'WeltClar1980';
+comment.tL11 =  [''];
+%
+data.tL12 = [ ... % time since start (d), length (mm)
+	15 1.49;
+	14 2.05;
+	24 2.0;
+	23 2.51;
+	20 3.0;
+	23 3.0;
+	29 3.0;
+	33 2.79;
+	32 2.54;
+	29 2.54;
+	32 2.26;
+	23 3.52;
+	28 3.49;
+	32 3.49;
+	31 4.01;
+	23 4.03;
+	24 4.54;
+	42 2.0;
+	52 2.0;
+	42 2.54;
+	49 2.54;
+	55 2.49;
+	59 2.51;
+	60 3.0;
+	53 3.0;
+	50 3.0;
+	51 3.52;
+	55 3.52;
+	59 3.61;
+	59 4.01;
+	56 4.01;
+	52 4.01;
+	52 4.54;
+	60 4.54;
+	66 4.54;
+	59 5.03;
+	72 6.01;
+	77 6.01;
+	73 5.03;
+	66 3.49;
+	71 3.0;
+	79 2.51;
+	94 2.54;
+	94 3.0;
+	86 3.49;
+	91 3.49;
+	97 3.52;
+	98 3.75;
+	96 4.03;
+	92 4.03;
+	89 4.03;
+	85 5.03;
+	96 7.01;
+	99 7.01;
+	98 8.04;
+	99 6.03;
+	104 6.01;
+	98 5.55;
+	101 5.55;
+	106 5.55;
+	95 5.03;
+	98 5.03;
+	101 5.03;
+	104 5.03;
+	110 5.03;
+	107 4.54;
+	109 3.98;
+	113 4.01;
+	109 3.56;
+	110 3.0;
+	118 3.0;
+	148 3.47;
+	161 4.01;
+	135 3.98;
+	133 3.98;
+	125 4.52;
+	131 4.54;
+	117 6.01;
+	123 6.01;
+	132 6.01;
+	126 5.52;
+	107 7.01;
+	116 7.01;
+	121 7.5;
+	126 7.01;
+	131 7.01;
+	141 7.01;
+	141 5.52;
+	149 5.01;
+	155 4.99;
+	158 5.01;
+	148 6.01;
+	155 6.01;
+	158 6.01;
+	127 8.02;
+	139 8.02;
+	149 8.02;
+	154 9.04;
+	157 9.04;
+	162 8.02;
+	178 9.04;
+	178 8.02;
+	156 7.01;
+	170 7.01;
+	187 5.99
+];
+data.tL11(:, 2) = data.tL11(:, 2) ./10; % convert to cm
+n=size(data.tL12,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
+units.tL12   = {'d', 'cm'};  label.tL12 = {'time since start', 'length', '10 C'};  
+temp.tL12    = C2K(10);  units.temp.tL12 = 'K'; label.temp.tL12 = 'temperature';
+bibkey.tL12 = 'WeltClar1980';
+comment.tL12 =  [''];
+%
+data.tL13 = [ ... % time since start (d), length (mm)
+	17	2.11;
+	27	2.09;
+	31	2.11;
+	27	2.62;
+	31	2.62;
+	26	3.12;
+	30	3.14;
+	27	3.52;
+	27	3.7;
+	30	3.65;
+	35	3.61;
+	26	4.12;
+	34	4.12;
+	35	4.61;
+	45	4.65;
+	56	5.19;
+	54	4.61;
+	52	4.12;
+	40	3.14;
+	53	3.38;
+	51	3.14;
+	54	3.12;
+	59	3.38;
+	59	3.12;
+	63	3.12;
+	59	2.91;
+	84	8.13;
+	84	6.13;
+	91	5.17;
+	106	4.14;
+	106	3.63;
+	106	3.36;
+	113	9.14;
+	120	7.11;
+	122	6.13;
+	120	4.65;
+	121	4.9;
+	133	5.41;
+	152	5.64;
+	151	8.13;
+	172	9.7;
+	171	7.15
+];
+data.tL13(:, 2) = data.tL13(:, 2) ./10; % convert to cm
+n=size(data.tL13,1); for i=2:n; if data.tL13(i,1)<=data.tL13(i-1,1); data.tL13(i,1)=data.tL13(i-1,1)+1e-8; end;end
+units.tL13   = {'d', 'cm'};  label.tL13 = {'time since start', 'length', '15 C'};  
+temp.tL13    = C2K(15);  units.temp.tL13 = 'K'; label.temp.tL13 = 'temperature';
+bibkey.tL13 = 'WeltClar1980';
+comment.tL13 =  [''];
+%
+data.tL14 = [ ... % time since start (d), length (mm)
+	12	2.11;
+	12	3.62;
+	33	2.13;
+	26	2.64;
+	30	2.64;
+	32	2.64;
+	32	2.92;
+	23	3.29;
+	26	3.18;
+	32	3.13;
+	33	3.38;
+	25	3.64;
+	21	3.88;
+	26	4.15;
+	26	4.64;
+	31	4.66;
+	33	4.15;
+	40	4.15;
+	40	3.15;
+	39	3.64;
+	45	3.64;
+	49	3.64;
+	54	4.15;
+	47	4.66;
+	53	4.7;
+	58	4.61;
+	62	4.65;
+	48	5.17;
+	53	5.68;
+	58	5.68;
+	61	5.68;
+	61	5.17;
+	60	6.14;
+	47	7.19;
+	54	7.19;
+	71	8.21;
+	93	7.18;
+	92	6.74;
+	83	6.18;
+	89	6.18;
+	102	6.2;
+	93	5.16;
+	140	7.72
+];
+data.tL14(:, 2) = data.tL14(:, 2) ./10; % convert to cm
+units.tL14   = {'d', 'cm'};  label.tL14 = {'time since start', 'length', '20 C'};  
+temp.tL14    = C2K(20);  units.temp.tL14 = 'K'; label.temp.tL14 = 'temperature';
+bibkey.tL14 = 'WeltClar1980';
+comment.tL14 =  [''];
 %% set weights for all real data
 weights = setweights(data, []);
 
@@ -1036,6 +1351,7 @@ bibkey = 'Huan2024'; type = 'misc'; bib = [ ...
 'author = {Anna Huang}, {Paul J. Van den Brink}, {Nico W. Van den Brink}, {Jan Baas} ' ... 
 'title = {A dynamic energy budget (DEB) model to assess the sublethal effects of imidacloprid toward Gammarus pulex at different temperatures}, ' ...
 'note = {only control data used for the entries}'];
+% 
 metaData.biblist.(bibkey) = ['''@', type, '{', bibkey, ', ' bib, '}'';'];
 bibkey = 'WeltClar1980'; type = 'misc'; bib = [ ... 
 'author = {J. S. Welton}, {R. T. Clarke}, ' ... 

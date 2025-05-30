@@ -907,6 +907,7 @@ data.tL8 = [ ... % time since start (d), length (mm)
 	245	8.67
 ];
 data.tL8(:, 2) = data.tL8(:, 2) ./10; % convert to cm
+n=size(data.tL8,1); for i=2:n; if data.tL8(i,1)<=data.tL8(i-1,1); data.tL8(i,1)=data.tL8(i-1,1)+1e-8; end;end
 units.tL8   = {'d', 'cm'};  label.tL8 = {'time since start', 'length', '11 C'};  
 temp.tL8    = C2K(11);  units.temp.tL8 = 'K'; label.temp.tL8 = 'temperature';
 bibkey.tL8 = 'Huan2024';
@@ -927,6 +928,7 @@ data.tL9 = [ ... % time since start (d), length (mm)
 	473	11.25
 ];
 data.tL9(:, 2) = data.tL9(:, 2) ./10; % convert to cm
+n=size(data.tL9,1); for i=2:n; if data.tL9(i,1)<=data.tL9(i-1,1); data.tL9(i,1)=data.tL9(i-1,1)+1e-8; end;end
 units.tL9   = {'d', 'cm'};  label.tL9 = {'time since start', 'length', '13 C'};  
 temp.tL9    = C2K(13);  units.temp.tL9 = 'K'; label.temp.tL9 = 'temperature';
 bibkey.tL9 = 'Huan2024';
@@ -955,6 +957,7 @@ data.tL10 = [ ... % time since start (d), length (mm)
 	199	8.99
 ];
 data.tL10(:, 2) = data.tL10(:, 2) ./10; % convert to cm
+n=size(data.tL10,1); for i=2:n; if data.tL10(i,1)<=data.tL10(i-1,1); data.tL10(i,1)=data.tL10(i-1,1)+1e-8; end;end
 units.tL10   = {'d', 'cm'};  label.tL10 = {'time since start', 'length', '15 C'};  
 temp.tL10    = C2K(15);  units.temp.tL10 = 'K'; label.temp.tL10 = 'temperature';
 bibkey.tL10 = 'Huan2024';
@@ -1028,6 +1031,7 @@ data.tL11 = [ ... % time since start (d), length (mm)
 	444 7.34
 ];
 data.tL11(:, 2) = data.tL11(:, 2) ./10; % convert to cm
+n=size(data.tL11,1); for i=2:n; if data.tL11(i,1)<=data.tL11(i-1,1); data.tL11(i,1)=data.tL11(i-1,1)+1e-8; end;end
 units.tL11   = {'d', 'cm'};  label.tL11 = {'time since start', 'length', '5 C'};  
 temp.tL11    = C2K(5);  units.temp.tL11 = 'K'; label.temp.tL11 = 'temperature';
 bibkey.tL11 = 'WeltClar1980';
@@ -1140,7 +1144,8 @@ data.tL12 = [ ... % time since start (d), length (mm)
 	170 7.01;
 	187 5.99
 ];
-data.tL11(:, 2) = data.tL11(:, 2) ./10; % convert to cm
+data.tL12(:, 2) = data.tL12(:, 2) ./10; % convert to cm
+n=size(data.tL12,1); for i=2:n; if data.tL12(i,1)<=data.tL12(i-1,1); data.tL12(i,1)=data.tL12(i-1,1)+1e-8; end;end
 units.tL12   = {'d', 'cm'};  label.tL12 = {'time since start', 'length', '10 C'};  
 temp.tL12    = C2K(10);  units.temp.tL12 = 'K'; label.temp.tL12 = 'temperature';
 bibkey.tL12 = 'WeltClar1980';
@@ -1243,6 +1248,7 @@ data.tL14 = [ ... % time since start (d), length (mm)
 	140	7.72
 ];
 data.tL14(:, 2) = data.tL14(:, 2) ./10; % convert to cm
+n=size(data.tL14,1); for i=2:n; if data.tL14(i,1)<=data.tL14(i-1,1); data.tL14(i,1)=data.tL14(i-1,1)+1e-8; end;end
 units.tL14   = {'d', 'cm'};  label.tL14 = {'time since start', 'length', '20 C'};  
 temp.tL14    = C2K(20);  units.temp.tL14 = 'K'; label.temp.tL14 = 'temperature';
 bibkey.tL14 = 'WeltClar1980';
