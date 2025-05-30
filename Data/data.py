@@ -28,9 +28,9 @@ def plot_data(df, title):
 # df3 is data on 13°C
 
 # round length to 2 decimal places
-df1["length"] = df1["length"].round(2)/10
-df2["length"] = df2["length"].round(2)/10
-df3["length"] = df3["length"].round(2)/10
+df1["length"] = df1["length"].round(2)
+df2["length"] = df2["length"].round(2)
+df3["length"] = df3["length"].round(2)
 
 # set days as integers
 df1["day"] = df1["day"].astype(int)
