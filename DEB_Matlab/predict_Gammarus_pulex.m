@@ -88,40 +88,40 @@ function [prdData, info] = predict_Gammarus_pulex(par, data, auxData)
   tvel = get_tj(pars_tj, f, [], tL(:,1) * k_M * TC_tL);
   ELw = L_m * tvel(:,4)/ del_M;                              % cm, length
   % 7 deg C 
-  tvel = get_tj(pars_tj, f, del_M*Lw2_0/L_m, tL2(:,1) * k_M * TC_7);
+  tvel = get_tj(pars_tj, f, L2_0/L_m, tL2(:,1) * k_M * TC_7);
   ELw_2 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
-  tvel = get_tj(pars_tj, f, del_M*Lw5_0/L_m, tL5(:,1) * k_M * TC_7);
+  tvel = get_tj(pars_tj, f, L5_0/L_m, tL5(:,1) * k_M * TC_7);
   ELw_5 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
   % 11 deg C
-  tvel = get_tj(pars_tj, f, del_M*Lw3_0/L_m, tL3(:,1) * k_M * TC_11);
+  tvel = get_tj(pars_tj, f, L3_0/L_m, tL3(:,1) * k_M * TC_11);
   ELw_3 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
-  tvel = get_tj(pars_tj, f, del_M*Lw6_0/L_m, tL6(:,1) * k_M * TC_11);
+  tvel = get_tj(pars_tj, f, L6_0/L_m, tL6(:,1) * k_M * TC_11);
   ELw_6 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
   % 15 deg C
-  tvel = get_tj(pars_tj, f, del_M*Lw4_0/L_m, tL4(:,1) * k_M * TC_15);
+  tvel = get_tj(pars_tj, f, L4_0/L_m, tL4(:,1) * k_M * TC_15);
   ELw_4 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
-  tvel = get_tj(pars_tj, f, del_M*Lw7_0/L_m, tL7(:,1) * k_M * TC_15);
+  tvel = get_tj(pars_tj, f, L7_0/L_m, tL7(:,1) * k_M * TC_15);
   ELw_7 = L_m * tvel(:,4)/ del_M;                              % cm, polar length
   % 11 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw8_0/L_m, tL8(:,1) * k_M * TC_11);
+  tvel = get_tj(pars_tj, f, L8_0/L_m, tL8(:,1) * k_M * TC_11);
   ELw_8 = L_m * tvel(:,4)/ del_M;                              % cm, polar length                              
   % 13 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw9_0/L_m, tL9(:,1) * k_M * TC_13);
+  tvel = get_tj(pars_tj, f, L9_0/L_m, tL9(:,1) * k_M * TC_13);
   ELw_9 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   % 15 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw10_0/L_m, tL10(:,1) * k_M * TC_15);
+  tvel = get_tj(pars_tj, f, L10_0/L_m, tL10(:,1) * k_M * TC_15);
   ELw_10 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   % 5 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw11_0/L_m, tL11(:,1) * k_M * TC_5);
+  tvel = get_tj(pars_tj, f, L11_0/L_m, tL11(:,1) * k_M * TC_5);
   ELw_11 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   % 10 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw12_0/L_m, tL12(:,1) * k_M * TC_10);
+  tvel = get_tj(pars_tj, f, L12_0/L_m, tL12(:,1) * k_M * TC_10);
   ELw_12 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   % 15 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw13_0/L_m, tL13(:,1) * k_M * TC_15);
+  tvel = get_tj(pars_tj, f, L13_0/L_m, tL13(:,1) * k_M * TC_15);
   ELw_13 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   % 20 deg C
-   tvel = get_tj(pars_tj, f, del_M*Lw14_0/L_m, tL14(:,1) * k_M * TC_20);
+  tvel = get_tj(pars_tj, f, L14_0/L_m, tL14(:,1) * k_M * TC_20);
   ELw_14 = L_m * tvel(:,4)/ del_M;                              % cm, polar length 
   
   
