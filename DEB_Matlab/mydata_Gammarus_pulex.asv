@@ -290,7 +290,6 @@ bibkey.tL14 = 'WeltClar1980';
 comment.tL14 =  [''];
 %% set weights for all real data
 weights = setweights(data, []);
-weights.tW_m = 5* weights.tW_m;
 
 %% set pseudodata and respective weights
 [data, units, label, weights] = addpseudodata(data, units, label, weights);
@@ -308,9 +307,9 @@ set2 = {'tL7','tL6','tL5'}; subtitle2 = {'Data for 15, 11, 7 C'};
 set3 = {'tW_f','tW_m'}; subtitle3 = {'Data for female, male'};
 set4 = {'tL10','tL9','tL8'}; subtitle4 = {'Huan2024 data for 15, 13, 11 C'};
 set5 = {'tL14','tL13','tL12','tL11'}; subtitle5 = {'Huan2024 data for 20, 15, 10, 5 C'};
-set6 = {'Tab', 'Tab2'}; comment2 = {'Data for 1, 5, 10, 15, 20C'};
+set6 = {'Tab', 'Tab2'; comment = {'Data for 1, 5, 10, 15, 20C'};
 metaData.grp.sets = {set1,set2,set3,set4,set5,set6};
-metaData.grp.subtitle = {comment1,subtitle2,subtitle3,subtitle4,subtitle5,comment2};
+metaData.grp.subtitle = {comment1,subtitle2,subtitle3,subtitle4,subtitle5,subtitles6};
 
 %% Discussion points
 D1 = 'Males are assumed to differ from females by {p_Am} only';
